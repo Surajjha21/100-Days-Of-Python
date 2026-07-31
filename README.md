@@ -32,21 +32,6 @@ Throughout this journey, I will upload all of my daily projects, coding exercise
 - Git
 - GitHub
 
-## 📅 Progress
-
-- ✅ Day 1
-- ✅ Day 2
-- ✅ Day 3
-- ✅ Day 4
-- ✅ Day 5
-- ✅ Day 6
-- ✅ Day 7
-- ✅ Day 8
-- ✅ Day 9
-- 🚧 Day 10 (In Progress)
-
-*(This section will be updated as I continue my journey.)*
-
 ## 🚀 Why This Repository?
 
 I believe the best way to learn programming is by writing code consistently and solving real problems. Instead of only following tutorials, I want to document every step of my learning process—including mistakes, improvements, and lessons learned. Looking back at these projects in the future will help me measure how much I've grown as a programmer.
