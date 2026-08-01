@@ -1,3 +1,4 @@
+print ("\n"*10)
 import random
 print("WELCOME TO BLACKJACK")
 start=input("Type 'Yes' to start or 'No' to exit: ").lower()
@@ -34,7 +35,7 @@ if start=="yes":
                     player_cards.append(random.choice(cards))
                     player_cards_sum = sum(player_cards)
                     print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
-                    print(f"Dealer's Cards: {dealer_cards[0]},*")
+                    print(f"Dealer's Cards: {dealer_cards[0]},* and sum: {dealer_cards[0]}")
 
                     if player_cards_sum > 21:
                         print("***BUST***")
@@ -45,9 +46,36 @@ if start=="yes":
 
 
                 elif continue_picking_cards == "no":
+                    dealer_cards_sum=sum(dealer_cards)
+                    print(player_cards)
                     print(dealer_cards)
 
+                    if 21>dealer_cards_sum>player_cards_sum and dealer_cards_sum>17:
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
+                        print(f"{player_name} Lose")
 
+                    elif dealer_cards_sum==player_cards_sum and dealer_cards_sum>17:
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print("Game Draw")
+
+                    elif dealer_cards_sum==21:
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
+                        print(f"{player_name} Lose")
+
+                    while dealer_cards_sum<17:
+                        dealer_cards.append(random.choice(cards))
+                        dealer_cards_sum=sum(dealer_cards)
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
+
+                        if dealer_cards_sum>21:
+                            print(f"BUST {player_name} Win")
+
+                        elif 17<dealer_cards_sum>player_cards_sum or dealer_cards_sum==21:
+                            print(f"{player_name} Lose")                            
 
 
     game()
