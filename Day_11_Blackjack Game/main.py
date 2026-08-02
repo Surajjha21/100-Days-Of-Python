@@ -1,6 +1,8 @@
 def blackjack():
     print ("\n"*3)
+    from art import logo
     import random
+    print(logo)
     print("WELCOME TO BLACKJACK")
     start=input("Type 'Yes' to start or 'No' to exit: ").lower()
 
