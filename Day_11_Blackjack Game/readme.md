@@ -1,120 +1,45 @@
-# 🃏 Day 11 - Blackjack Capstone Project
+🃏 Day 11 - Blackjack Capstone Project
+What is this?
 
-## 📌 Project Overview
+A text-based Blackjack game built in Python as part of Dr. Angela Yu's 100 Days of Code bootcamp. You play against a computer dealer — hit, stand, bust, or hit Blackjack.
 
-This is my Day 11 Capstone Project from Dr. Angela Yu's **100 Days of Code: The Complete Python Pro Bootcamp**.
+Features
+Random card dealing
+Hit / Stand decisions
+Dealer auto-draws until 17+
+Ace adjusts from 11 → 1 when needed
+Bust, Blackjack, Win, Lose, Draw detection
+Restart option after each game
+How to Run
+bash
+python blackjack.py
 
-The project is a text-based Blackjack game built using Python. It simulates the basic rules of Blackjack, allowing the player to play against a computer dealer.
+Requires Python 3.x. That's it.
 
----
+My Experience
 
-## ✨ Features
+Honestly this one took me around 9+ hours and was the hardest thing I've built so far.
 
-- 🎴 Random card dealing
-- 👤 Player Hit / Stand decisions
-- 🤖 Automated dealer logic
-- 🂡 Ace value adjustment (11 → 1 when needed)
-- 💥 Bust detection
-- 🏆 Blackjack detection
-- 🤝 Draw, Win and Lose conditions
-- 🔁 Restart game option
+I didn't watch any of Angela's hint videos — just read the rules, drew a flowchart on paper, and figured it out from there. A lot of that time was just me staring at the dealer logic trying to understand why it wasn't working.
 
----
+The parts that gave me the most trouble:
 
-## ▶️ How to Run
+Dealer draw logic
+Ace handling (when to flip 11 → 1)
+Managing all the win/lose/draw conditions without making the code a mess
+Recursive game flow (which I later learned could've been a while loop)
 
-### Requirements
+The code isn't perfect and I know that. But I wanted to finish it my way before watching the solution.
 
-- Python 3.x
+What I Learned
 
-### Run the project
+Functions, lists, loops, conditionals, recursion, random module — all the usual stuff. But honestly the bigger thing I learned is that struggling for hours on something and finally getting it to work feels different from following along with a tutorial.
 
-```bash
-python main.py
-```
+What I'll Fix Later
+Replace recursion with a while loop
+Show A, J, Q, K instead of numbers
+Break it into smaller cleaner functions
+Remove repeated print logic
+Course
 
----
-
-## 🎮 How to Play
-
-1. Start the game.
-2. Enter your name.
-3. You will receive two cards.
-4. The dealer reveals only one card.
-5. Choose whether to draw another card or stand.
-6. The dealer follows Blackjack rules.
-7. The winner is determined based on the final scores.
-
----
-
-# 💭 My Experience
-
-This project was the biggest challenge I've completed so far in my Python journey.
-
-I built this project **without watching Angela Yu's solution or taking implementation hints.**
-
-Before writing any code, I:
-
-- Read and understood the game rules.
-- Created a complete flowchart.
-- Planned the game logic.
-- Built the project step by step.
-
-I spent around **9+ hours** building, debugging, testing, and improving this project.
-
-The most challenging parts were:
-
-- Dealer game logic
-- Recursive game flow
-- Handling the Ace (11 → 1) logic
-- Managing multiple winning and losing conditions
-- Debugging different game states
-
-Although the code is not perfect and could be cleaner, I intentionally completed it using my own reasoning before comparing it with the instructor's solution.
-
----
-
-# 📚 What I Learned
-
-Through this project, I practiced:
-
-- Functions
-- Lists
-- Loops
-- Conditional statements
-- Recursion
-- Random module
-- Debugging
-- Problem solving
-- Breaking a large problem into smaller parts
-- Designing program flow before coding
-
-More importantly, I learned that struggling with a project is a normal part of becoming a programmer.
-
----
-
-## 🚀 Future Improvements
-
-- Improve code readability
-- Reduce repeated logic
-- Refactor into smaller functions
-- Display cards using A, J, Q, and K instead of only numbers
-- Make the project more modular
-
----
-
-## 📖 Course
-
-**Course:** Dr. Angela Yu – 100 Days of Code: The Complete Python Pro Bootcamp
-
-**Day:** 11 – Blackjack Capstone Project
-
----
-
-### ⭐ Personal Note
-
-This project reminded me that programming is not about writing perfect code on the first attempt.
-
-It's about understanding the problem, making mistakes, debugging patiently, and improving step by step.
-
-This project represents an important milestone in my Python learning journey.
+Dr. Angela Yu – 100 Days of Code | Day 11
