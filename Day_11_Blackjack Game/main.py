@@ -4,15 +4,13 @@ def blackjack():
     print("WELCOME TO BLACKJACK")
     start=input("Type 'Yes' to start or 'No' to exit: ").lower()
 
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 5]
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     # name_mapping= {cards[0]:"A",cards[5]:"J",cards[11]:"Q",cards[12]:"K", cards[1]:"2", cards[2]:"3", cards[3]:"4", cards[4]:"5", cards[5]:"6", cards[6]:"7", cards[7]:"8", cards[8]:"9", cards[9]:"5"}
     player_cards = []
     dealer_cards = []
 
     if start=="yes":
         
-        player_cards_sum=sum(player_cards)
-        dealer_cards_sum=sum(dealer_cards)
         player_name=input("Enter Your Name:-  ").title()
         print("\n"*3)
         
@@ -81,13 +79,13 @@ def blackjack():
                     # print(player_cards)
                     # print(dealer_cards)
 
-                    if 21>dealer_cards_sum>player_cards_sum and dealer_cards_sum>17:
+                    if 21>dealer_cards_sum>player_cards_sum and dealer_cards_sum>=17:
                         print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
                         print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
                         print(f"{player_name} Lose")
                         print("\n" * 5)
 
-                    elif dealer_cards_sum==player_cards_sum and dealer_cards_sum>17:
+                    elif dealer_cards_sum==player_cards_sum and dealer_cards_sum>=17:
                         print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
                         print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
                         print("Game Draw")
@@ -98,6 +96,13 @@ def blackjack():
                         print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
                         print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
                         print(f"{player_name} Lose")
+                        print("\n" * 5)
+
+                    elif 21>player_cards_sum>dealer_cards_sum and dealer_cards_sum>=17:
+                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                        print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
+                        print("\n" * 2)
+                        print(f"{player_name} Win")
                         print("\n" * 5)
 
                     while dealer_cards_sum<17:
@@ -123,30 +128,39 @@ def blackjack():
                             print(f"{player_name} Lose")
                             print("\n" * 5)
 
-                        elif dealer_cards_sum==player_cards_sum and dealer_cards_sum>17:
+                        elif dealer_cards_sum==player_cards_sum and dealer_cards_sum>=17:
                             print("Game Draw")
                             print("\n" * 5)
+
+                        elif 21>player_cards_sum>dealer_cards_sum and dealer_cards_sum>=17:
+                                        print(f"{player_name} Cards:{player_cards} and sum: {player_cards_sum}")
+                                        print(f"Dealer's Cards: {dealer_cards} and sum: {dealer_cards_sum}")
+                                        print("\n" * 2)
+                                        print(f"{player_name} Win")
+                                        print("\n" * 5)
+                        
                         
                 else:
                     print("Invalid Input")
-                    
+
+               
 
         game()
 
+    
 
     elif start=="no":
         print("Thanks for visiting")
 
     else:
         print("Invalid Input")
-        blackjack()
 
-
-
-    restart=input("Do you want to restart the game? Type 'Yes' for restart 'No' for exit. \n").lower()
-    if restart=="yes":
-        blackjack()
-    else:
-        print("Thanks for visiting")
 
 blackjack()
+
+restart=input("Do you want to restart the game? Type 'Yes' for restart 'No' for exit. \n").lower()
+            
+if restart=="yes":
+    blackjack()
+else:
+    print("Thanks for visiting")
